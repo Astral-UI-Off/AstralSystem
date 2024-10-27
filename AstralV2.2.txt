@@ -1,3 +1,10 @@
+local guiName = "AstralV2.2"
+local parent = game:GetService("CoreGui")
+
+if parent:FindFirstChild(guiName) then
+    return
+end
+
 --// Instances
 
 local astral_v22 = Instance.new("ScreenGui")
