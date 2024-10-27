@@ -1795,7 +1795,7 @@ task.spawn(function()
 
 	titre.Text = executeur
 
-	if executeur == "Wave" or "Synapse Z" then
+	if executeur == "Wave" or executeur == "Synapse Z" or executeur == "Solara" then
 		soustitre.Text = "Cette executeur supporte Astral"
 	else
 		soustitre.Text = "Cette executeur ne supporte pas Astral"
