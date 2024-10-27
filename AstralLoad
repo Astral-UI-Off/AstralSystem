@@ -1,0 +1,9 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralSystem/refs/heads/main/AstralV2.2.txt"))() -- Astral Main
+
+-- Frame
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/AntiKick.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/ChatLogs.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Musique.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Script.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Setting.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Webhook.txt"))()
