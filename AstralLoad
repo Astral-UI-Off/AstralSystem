@@ -1,9 +1,792 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralSystem/refs/heads/main/AstralV2.2.txt"))() -- Astral Main
+--// Instances
 
--- Frame
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/AntiKick.txt"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/ChatLogs.txt"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Musique.txt"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Script.txt"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Setting.txt"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Webhook.txt"))()
+local astral_key_systme = Instance.new("ScreenGui")
+astral_key_systme.IgnoreGuiInset = false
+astral_key_systme.ResetOnSpawn = true
+astral_key_systme.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+astral_key_systme.Name = "Astral Key Système"
+astral_key_systme.Parent = game:GetService("CoreGui")
+
+local key_sys = Instance.new("Frame")
+key_sys.BackgroundColor3 = Color3.new(1, 1, 1)
+key_sys.BackgroundTransparency = 1
+key_sys.BorderColor3 = Color3.new(0, 0, 0)
+key_sys.BorderSizePixel = 0
+key_sys.Position = UDim2.new(0.336199164, 0, 0.356076866, 0)
+key_sys.Size = UDim2.new(0, 613, 0, 384)
+key_sys.Visible = true
+key_sys.Name = "KeySys"
+key_sys.Active = true
+key_sys.Draggable = true
+key_sys.Parent = astral_key_systme
+
+local uicorner = Instance.new("UICorner")
+uicorner.CornerRadius = UDim.new(0, 13)
+uicorner.Parent = key_sys
+
+local soustitre = Instance.new("TextLabel")
+soustitre.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+soustitre.Text = "Système d'authentification avec clé d'accès."
+soustitre.TextColor3 = Color3.new(0.709804, 0.709804, 0.709804)
+soustitre.TextScaled = true
+soustitre.TextSize = 14
+soustitre.TextTransparency = 1
+soustitre.TextWrapped = true
+soustitre.TextXAlignment = Enum.TextXAlignment.Left
+soustitre.BackgroundColor3 = Color3.new(1, 1, 1)
+soustitre.BackgroundTransparency = 1
+soustitre.BorderColor3 = Color3.new(0, 0, 0)
+soustitre.BorderSizePixel = 0
+soustitre.Position = UDim2.new(0.0672071725, 0, 0.196729183, 0)
+soustitre.Size = UDim2.new(0, 430, 0, 16)
+soustitre.Visible = true
+soustitre.Name = "Soustitre"
+soustitre.Parent = key_sys
+
+local titre = Instance.new("TextLabel")
+titre.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+titre.Text = "Astral"
+titre.TextColor3 = Color3.new(1, 1, 1)
+titre.TextScaled = true
+titre.TextSize = 14
+titre.TextTransparency = 1
+titre.TextWrapped = true
+titre.TextXAlignment = Enum.TextXAlignment.Left
+titre.BackgroundColor3 = Color3.new(1, 1, 1)
+titre.BackgroundTransparency = 1
+titre.BorderColor3 = Color3.new(0, 0, 0)
+titre.BorderSizePixel = 0
+titre.Position = UDim2.new(0.0659999996, 0, 0.119000003, 0)
+titre.Size = UDim2.new(0, 94, 0, 29)
+titre.Visible = true
+titre.Name = "Titre"
+titre.Parent = key_sys
+
+local uigradient = Instance.new("UIGradient")
+uigradient.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.0627451, 0.0627451, 0.0627451)), ColorSequenceKeypoint.new(1, Color3.new(0.207843, 0.207843, 0.207843))})
+uigradient.Parent = key_sys
+
+local main_box = Instance.new("Frame")
+main_box.BackgroundColor3 = Color3.new(0.207843, 0.207843, 0.207843)
+main_box.BackgroundTransparency = 1
+main_box.BorderColor3 = Color3.new(0, 0, 0)
+main_box.BorderSizePixel = 0
+main_box.Position = UDim2.new(0.0652528554, 0, 0.385416746, 0)
+main_box.Size = UDim2.new(0, 358, 0, 39)
+main_box.Visible = true
+main_box.Name = "MainBox"
+main_box.Parent = key_sys
+
+local uicorner_2 = Instance.new("UICorner")
+uicorner_2.Parent = main_box
+
+local uistroke = Instance.new("UIStroke")
+uistroke.Color = Color3.new(0.333333, 0.333333, 0.333333)
+uistroke.Parent = main_box
+uistroke.Transparency = 1
+
+local text_box = Instance.new("TextBox")
+text_box.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+text_box.PlaceholderColor3 = Color3.new(0.698039, 0.698039, 0.698039)
+text_box.PlaceholderText = "Votre Clé"
+text_box.Text = ""
+text_box.TextColor3 = Color3.new(0.698039, 0.698039, 0.698039)
+text_box.TextScaled = true
+text_box.TextSize = 14
+text_box.TextTransparency = 1
+text_box.TextWrapped = true
+text_box.TextXAlignment = Enum.TextXAlignment.Left
+text_box.BackgroundColor3 = Color3.new(1, 1, 1)
+text_box.BackgroundTransparency = 1
+text_box.BorderColor3 = Color3.new(0, 0, 0)
+text_box.BorderSizePixel = 0
+text_box.Position = UDim2.new(0.0529999994, 0, 0.280000001, 0)
+text_box.Size = UDim2.new(0, 320, 0, 19)
+text_box.Visible = true
+text_box.Parent = main_box
+
+local titre_key = Instance.new("TextLabel")
+titre_key.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+titre_key.Text = "Entrée votre clé ici"
+titre_key.TextColor3 = Color3.new(0.709804, 0.709804, 0.709804)
+titre_key.TextScaled = true
+titre_key.TextSize = 14
+titre_key.TextTransparency = 1
+titre_key.TextWrapped = true
+titre_key.TextXAlignment = Enum.TextXAlignment.Left
+titre_key.BackgroundColor3 = Color3.new(1, 1, 1)
+titre_key.BackgroundTransparency = 1
+titre_key.BorderColor3 = Color3.new(0, 0, 0)
+titre_key.BorderSizePixel = 0
+titre_key.Position = UDim2.new(0.0639445335, 0, 0.326937526, 0)
+titre_key.Size = UDim2.new(0, 430, 0, 16)
+titre_key.Visible = true
+titre_key.Name = "TitreKey"
+titre_key.Parent = key_sys
+
+local problemetitre = Instance.new("TextLabel")
+problemetitre.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+problemetitre.Text = "Marche pas ?"
+problemetitre.TextColor3 = Color3.new(1, 1, 1)
+problemetitre.TextScaled = true
+problemetitre.TextSize = 14
+problemetitre.TextTransparency = 1
+problemetitre.TextWrapped = true
+problemetitre.TextXAlignment = Enum.TextXAlignment.Left
+problemetitre.BackgroundColor3 = Color3.new(1, 1, 1)
+problemetitre.BackgroundTransparency = 1
+problemetitre.BorderColor3 = Color3.new(0, 0, 0)
+problemetitre.BorderSizePixel = 0
+problemetitre.Position = UDim2.new(0.062737368, 0, 0.533062518, 0)
+problemetitre.Size = UDim2.new(0, 94, 0, 29)
+problemetitre.Visible = true
+problemetitre.Name = "Problemetitre"
+problemetitre.Parent = key_sys
+
+local problemedesc = Instance.new("TextLabel")
+problemedesc.Font = Enum.Font.Unknown
+problemedesc.Text = "Si la clé ne marche pas c'est que elle a changer ou que Astral est actuellement en maintenance"
+problemedesc.TextColor3 = Color3.new(0.709804, 0.709804, 0.709804)
+problemedesc.TextScaled = true
+problemedesc.TextSize = 14
+problemedesc.TextTransparency = 1
+problemedesc.TextWrapped = true
+problemedesc.TextXAlignment = Enum.TextXAlignment.Left
+problemedesc.BackgroundColor3 = Color3.new(1, 1, 1)
+problemedesc.BackgroundTransparency = 1
+problemedesc.BorderColor3 = Color3.new(0, 0, 0)
+problemedesc.BorderSizePixel = 0
+problemedesc.Position = UDim2.new(0.0639445335, 0, 0.608187616, 0)
+problemedesc.Size = UDim2.new(0, 430, 0, 29)
+problemedesc.Visible = true
+problemedesc.Name = "Problemedesc"
+problemedesc.Parent = key_sys
+
+local discord = Instance.new("TextLabel")
+discord.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+discord.Text = "Allez sur le discord pour en savoir plus sur le problème qui a actuellement sur Astral"
+discord.TextColor3 = Color3.new(0.886275, 0.886275, 0.886275)
+discord.TextScaled = true
+discord.TextSize = 14
+discord.TextTransparency = 1
+discord.TextWrapped = true
+discord.TextXAlignment = Enum.TextXAlignment.Left
+discord.BackgroundColor3 = Color3.new(1, 1, 1)
+discord.BackgroundTransparency = 1
+discord.BorderColor3 = Color3.new(0, 0, 0)
+discord.BorderSizePixel = 0
+discord.Position = UDim2.new(0.0639445335, 0, 0.699333429, 0)
+discord.Size = UDim2.new(0, 430, 0, 29)
+discord.Visible = true
+discord.Name = "Discord"
+discord.Parent = key_sys
+
+local link = Instance.new("Frame")
+link.AnchorPoint = Vector2.new(0.5, 0.5)
+link.BackgroundColor3 = Color3.new(1, 1, 1)
+link.BackgroundTransparency = 1
+link.BorderColor3 = Color3.new(0, 0, 0)
+link.BorderSizePixel = 0
+link.Position = UDim2.new(0.837275684, 0, 0.099524416, 0)
+link.Size = UDim2.new(0, 36, 0, 36)
+link.Visible = true
+link.ZIndex = 103
+link.Name = "Link"
+link.Parent = key_sys
+
+local uistroke_2 = Instance.new("UIStroke")
+uistroke_2.Color = Color3.new(1, 1, 1)
+uistroke_2.Thickness = 1.2000000476837158
+uistroke_2.Transparency = 1
+uistroke_2.Parent = link
+
+local uigradient_2 = Instance.new("UIGradient")
+uigradient_2.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.117647, 0.258824, 0.882353)), ColorSequenceKeypoint.new(1, Color3.new(0, 0.94902, 1))})
+uigradient_2.Rotation = 50
+uigradient_2.Parent = uistroke_2
+
+local uicorner_3 = Instance.new("UICorner")
+uicorner_3.Parent = link
+
+local uigradient_3 = Instance.new("UIGradient")
+uigradient_3.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.133333, 0.184314, 0.882353)), ColorSequenceKeypoint.new(1, Color3.new(0, 0.733333, 1))})
+uigradient_3.Rotation = 50
+uigradient_3.Parent = link
+
+local logo = Instance.new("ImageLabel")
+logo.Image = "rbxassetid://13868288377"
+logo.ImageTransparency = 1
+logo.BackgroundColor3 = Color3.new(1, 1, 1)
+logo.BackgroundTransparency = 1
+logo.BorderColor3 = Color3.new(0, 0, 0)
+logo.BorderSizePixel = 0
+logo.Position = UDim2.new(0.166999996, 0, 0.200000003, 0)
+logo.Size = UDim2.new(0, 24, 0, 24)
+logo.Visible = true
+logo.ZIndex = 102
+logo.Name = "Logo"
+logo.Parent = link
+
+local interaction = Instance.new("TextButton")
+interaction.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+interaction.Text = ""
+interaction.TextColor3 = Color3.new(0, 0, 0)
+interaction.TextSize = 14
+interaction.BackgroundColor3 = Color3.new(1, 1, 1)
+interaction.BackgroundTransparency = 1
+interaction.BorderColor3 = Color3.new(0, 0, 0)
+interaction.BorderSizePixel = 0
+interaction.Size = UDim2.new(0, 36, 0, 36)
+interaction.Visible = true
+interaction.ZIndex = 102
+interaction.Name = "Interaction"
+interaction.Parent = link
+
+local animate_script = Instance.new("LocalScript")
+animate_script.Name = "AnimateScript"
+animate_script.Parent = link
+
+local back = Instance.new("Frame")
+back.AnchorPoint = Vector2.new(0.5, 0.5)
+back.BackgroundColor3 = Color3.new(1, 1, 1)
+back.BackgroundTransparency = 1
+back.BorderColor3 = Color3.new(0, 0, 0)
+back.BorderSizePixel = 0
+back.Position = UDim2.new(0.919643879, 0, 0.099524416, 0)
+back.Size = UDim2.new(0, 36, 0, 36)
+back.Visible = true
+back.ZIndex = 103
+back.Name = "Back"
+back.Parent = key_sys
+
+local uistroke_3 = Instance.new("UIStroke")
+uistroke_3.Color = Color3.new(1, 1, 1)
+uistroke_3.Thickness = 1.2000000476837158
+uistroke_3.Transparency = 1
+uistroke_3.Parent = back
+
+local uigradient_4 = Instance.new("UIGradient")
+uigradient_4.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.882353, 0.184314, 0.133333)), ColorSequenceKeypoint.new(1, Color3.new(1, 0.8, 0.203922))})
+uigradient_4.Rotation = 50
+uigradient_4.Parent = uistroke_3
+
+local uicorner_4 = Instance.new("UICorner")
+uicorner_4.Parent = back
+
+local uigradient_5 = Instance.new("UIGradient")
+uigradient_5.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.639216, 0.105882, 0.105882)), ColorSequenceKeypoint.new(1, Color3.new(0.694118, 0.588235, 0.2))})
+uigradient_5.Rotation = 50
+uigradient_5.Parent = back
+
+local logo_2 = Instance.new("ImageLabel")
+logo_2.Image = "rbxassetid://13857935301"
+logo_2.ImageTransparency = 1
+logo_2.BackgroundColor3 = Color3.new(1, 1, 1)
+logo_2.BackgroundTransparency = 1
+logo_2.BorderColor3 = Color3.new(0, 0, 0)
+logo_2.BorderSizePixel = 0
+logo_2.Position = UDim2.new(0.166666672, 0, 0.166666672, 0)
+logo_2.Size = UDim2.new(0, 24, 0, 24)
+logo_2.Visible = true
+logo_2.ZIndex = 102
+logo_2.Name = "Logo"
+logo_2.Parent = back
+
+local interaction_2 = Instance.new("TextButton")
+interaction_2.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+interaction_2.Text = ""
+interaction_2.TextColor3 = Color3.new(0, 0, 0)
+interaction_2.TextSize = 14
+interaction_2.BackgroundColor3 = Color3.new(1, 1, 1)
+interaction_2.BackgroundTransparency = 1
+interaction_2.BorderColor3 = Color3.new(0, 0, 0)
+interaction_2.BorderSizePixel = 0
+interaction_2.Size = UDim2.new(0, 36, 0, 36)
+interaction_2.Visible = true
+interaction_2.ZIndex = 102
+interaction_2.Name = "Interaction"
+interaction_2.Parent = back
+
+local animate_script_2 = Instance.new("LocalScript")
+animate_script_2.Name = "AnimateScript"
+animate_script_2.Parent = back
+
+local verif = Instance.new("Frame")
+verif.AnchorPoint = Vector2.new(0.5, 0.5)
+verif.BackgroundColor3 = Color3.new(1, 1, 1)
+verif.BackgroundTransparency = 1
+verif.BorderColor3 = Color3.new(0, 0, 0)
+verif.BorderSizePixel = 0
+verif.Position = UDim2.new(0.697821498, 0, 0.435461909, 0)
+verif.Size = UDim2.new(0, 36, 0, 36)
+verif.Visible = true
+verif.ZIndex = 103
+verif.Name = "Verif"
+verif.Parent = key_sys
+
+local uistroke_4 = Instance.new("UIStroke")
+uistroke_4.Color = Color3.new(1, 1, 1)
+uistroke_4.Thickness = 1.2000000476837158
+uistroke_4.Transparency = 1
+uistroke_4.Parent = verif
+
+local uigradient_6 = Instance.new("UIGradient")
+uigradient_6.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.0156863, 1, 0)), ColorSequenceKeypoint.new(1, Color3.new(0.360784, 0.701961, 0))})
+uigradient_6.Rotation = 50
+uigradient_6.Parent = uistroke_4
+
+local uicorner_5 = Instance.new("UICorner")
+uicorner_5.Parent = verif
+
+local uigradient_7 = Instance.new("UIGradient")
+uigradient_7.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0, 0.854902, 0.0980392)), ColorSequenceKeypoint.new(1, Color3.new(0.145098, 0.282353, 0))})
+uigradient_7.Rotation = 50
+uigradient_7.Parent = verif
+
+local logo_3 = Instance.new("ImageLabel")
+logo_3.Image = "rbxassetid://13858797888"
+logo_3.ImageTransparency = 1
+logo_3.BackgroundColor3 = Color3.new(1, 1, 1)
+logo_3.BackgroundTransparency = 1
+logo_3.BorderColor3 = Color3.new(0, 0, 0)
+logo_3.BorderSizePixel = 0
+logo_3.Position = UDim2.new(0.166666672, 0, 0.166666672, 0)
+logo_3.Size = UDim2.new(0, 24, 0, 24)
+logo_3.Visible = true
+logo_3.ZIndex = 102
+logo_3.Name = "Logo"
+logo_3.Parent = verif
+
+local interaction_3 = Instance.new("TextButton")
+interaction_3.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+interaction_3.Text = ""
+interaction_3.TextColor3 = Color3.new(0, 0, 0)
+interaction_3.TextSize = 14
+interaction_3.BackgroundColor3 = Color3.new(1, 1, 1)
+interaction_3.BackgroundTransparency = 1
+interaction_3.BorderColor3 = Color3.new(0, 0, 0)
+interaction_3.BorderSizePixel = 0
+interaction_3.Size = UDim2.new(0, 36, 0, 36)
+interaction_3.Visible = true
+interaction_3.ZIndex = 102
+interaction_3.Name = "Interaction"
+interaction_3.Parent = verif
+
+local click_script = Instance.new("LocalScript")
+click_script.Name = "ClickScript"
+click_script.Parent = interaction_3
+
+local animate_script_3 = Instance.new("LocalScript")
+animate_script_3.Name = "AnimateScript"
+animate_script_3.Parent = verif
+
+local bienvenue = Instance.new("Frame")
+bienvenue.BackgroundColor3 = Color3.new(1, 1, 1)
+bienvenue.BorderColor3 = Color3.new(0, 0, 0)
+bienvenue.BorderSizePixel = 0
+bienvenue.Position = UDim2.new(0.336199164, 0, 0.356076866, 0)
+bienvenue.Size = UDim2.new(0, 613, 0, 384)
+bienvenue.Visible = true
+bienvenue.Name = "Bienvenue"
+bienvenue.Active = true
+bienvenue.Draggable = true
+bienvenue.Parent = astral_key_systme
+
+local uicorner_6 = Instance.new("UICorner")
+uicorner_6.CornerRadius = UDim.new(0, 13)
+uicorner_6.Parent = bienvenue
+
+local uigradient_8 = Instance.new("UIGradient")
+uigradient_8.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(0.0627451, 0.0627451, 0.0627451)), ColorSequenceKeypoint.new(1, Color3.new(0.207843, 0.207843, 0.207843))})
+uigradient_8.Parent = bienvenue
+
+local uistroke_5 = Instance.new("UIStroke")
+uistroke_5.Color = Color3.new(0.458824, 0.458824, 0.458824)
+uistroke_5.Thickness = 1.2000000476837158
+uistroke_5.Transparency = 1
+uistroke_5.Parent = bienvenue
+
+local titre_2 = Instance.new("TextLabel")
+titre_2.FontFace = Font.new("rbxassetid://12187365364", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+titre_2.Text = "Bienvenue sur Astral !"
+titre_2.TextColor3 = Color3.new(1, 1, 1)
+titre_2.TextScaled = true
+titre_2.TextSize = 14
+titre_2.TextWrapped = true
+titre_2.TextXAlignment = Enum.TextXAlignment.Left
+titre_2.BackgroundColor3 = Color3.new(1, 1, 1)
+titre_2.BackgroundTransparency = 1
+titre_2.BorderColor3 = Color3.new(0, 0, 0)
+titre_2.BorderSizePixel = 0
+titre_2.Position = UDim2.new(0.338511139, 0, 0.465724319, 0)
+titre_2.Size = UDim2.new(0, 215, 0, 25)
+titre_2.Visible = true
+titre_2.Name = "Titre"
+titre_2.Parent = bienvenue
+
+local script = Instance.new("LocalScript")
+script.Name = "Script"
+script.Parent = bienvenue
+
+--//Modules
+
+local modules = {}
+
+--// Scripts
+
+-- AnimateScript
+task.spawn(function()
+	local script = animate_script
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	--//VARIABLES:
+	local button = script.Parent
+	local gradient = button.UIGradient
+	local stroke = button.UIStroke
+	local ts = game:GetService("TweenService") 
+	local tiRotate = TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
+	local tiReset = TweenInfo.new(0.25, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
+	local tiStroke = TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut)
+	local rotateoffset = ts:Create(gradient, tiRotate, {Offset = Vector2.new(0, 1)})
+	local resetoffset = ts:Create(gradient, tiReset, {Offset = Vector2.new(0, 0)})
+	local rotateTween = ts:Create(gradient, tiRotate, {Rotation = 360})
+	local resetTween = ts:Create(gradient, tiReset, {Rotation = 50})
+
+	--//FUNCTIONS:
+	local function animateIn()
+		rotateTween:Play()
+		rotateoffset:Play()
+
+		local tween = ts:Create(stroke, tiStroke, {Transparency = 1})
+		tween:Play()
+	end
+
+	local function animateOut()
+		resetTween:Play()
+		resetoffset:Play()
+
+		local tween = ts:Create(stroke, tiStroke, {Transparency = 0})
+		tween:Play()
+	end
+
+	--//LISTENERS:
+	button.MouseEnter:Connect(animateIn)
+	button.MouseLeave:Connect(animateOut)
+end)
+
+-- AnimateScript
+task.spawn(function()
+	local script = animate_script_2
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	--//VARIABLES:
+	local button = script.Parent
+	local gradient = button.UIGradient
+	local stroke = button.UIStroke
+	local ts = game:GetService("TweenService") 
+	local tiRotate = TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
+	local tiReset = TweenInfo.new(0.25, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
+	local tiStroke = TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut)
+	local rotateoffset = ts:Create(gradient, tiRotate, {Offset = Vector2.new(0, 1)})
+	local resetoffset = ts:Create(gradient, tiReset, {Offset = Vector2.new(0, 0)})
+	local rotateTween = ts:Create(gradient, tiRotate, {Rotation = 360})
+	local resetTween = ts:Create(gradient, tiReset, {Rotation = 50})
+
+	--//FUNCTIONS:
+	local function animateIn()
+		rotateTween:Play()
+		rotateoffset:Play()
+
+		local tween = ts:Create(stroke, tiStroke, {Transparency = 1})
+		tween:Play()
+	end
+
+	local function animateOut()
+		resetTween:Play()
+		resetoffset:Play()
+
+		local tween = ts:Create(stroke, tiStroke, {Transparency = 0})
+		tween:Play()
+	end
+
+	--//LISTENERS:
+	button.MouseEnter:Connect(animateIn)
+	button.MouseLeave:Connect(animateOut)
+end)
+
+-- ClickScript
+task.spawn(function()
+	local script = click_script
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	local imagebon = 13858821561
+	local imagepbon = 13863493362
+	local imagewait = 13858797888
+	local discordlink = "..."
+
+	local destroyui = script.Parent.Parent.Parent.Parent
+
+	local logo = script.Parent.Parent.Logo
+	local textBox = script.Parent.Parent.Parent.MainBox.TextBox
+	local button = script.Parent
+
+	local exitbutton = script.Parent.Parent.Parent.Back.Interaction
+	local discordbutton = script.Parent.Parent.Parent.Link.Interaction
+
+	local response = request(
+		{
+			Url = "https://raw.githubusercontent.com/Astral-UI-Off/AstralSystem/refs/heads/main/test.json",
+			Method = "GET",
+			Headers = {
+				["Content-Type"] = "application/json"
+			}
+		}
+	)
+
+	local responseBody = response.Body
+	local jsonData = game:GetService("HttpService"):JSONDecode(responseBody)
+
+	local function checkText()
+		local text = textBox.Text
+		local Player = game.Players.LocalPlayer
+		local blacklist = {"Etienne_602", "rtretretretretre7", "mikezoldock"}
+		if text == jsonData.key then
+			logo.Image = "rbxassetid://"..imagebon
+			destroyui:Destroy()
+
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralSystem/refs/heads/main/AstralV2.2.txt"))() -- Astral Main
+
+			-- Frame
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/AntiKick.txt"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/ChatLogs.txt"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Musique.txt"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Script.txt"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Setting.txt"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Webhook.txt"))()
+			-- System notif ici
+		else
+			for i, v in pairs(blacklist) do
+				if Player.Name == v then
+					return
+				end
+			end
+			script.Parent.Parent.UIGradient.Color = ColorSequence.new({ColorSequenceKeypoint.new(0.00, Color3.new(0.85, 0.00, 0.00)), ColorSequenceKeypoint.new(1.00, Color3.new(0.28, 0.00, 0.00))})
+			script.Parent.Parent.UIStroke.UIGradient.Color = ColorSequence.new({ColorSequenceKeypoint.new(0.00, Color3.new(1.00, 0.00, 0.00)), ColorSequenceKeypoint.new(1.00, Color3.new(0.70, 0.00, 0.00))})
+			logo.Image = "rbxassetid://"..imagepbon
+
+			wait(2)
+
+			logo.Image = "rbxassetid://"..imagewait
+			script.Parent.Parent.UIGradient.Color = ColorSequence.new({ColorSequenceKeypoint.new(0.00, Color3.new(0.00, 0.85, 0.10)), ColorSequenceKeypoint.new(1.00, Color3.new(0.15, 0.28, 0.00))})
+			script.Parent.Parent.UIStroke.UIGradient.Color = ColorSequence.new({ColorSequenceKeypoint.new(0.00, Color3.new(0.02, 1.00, 0.00)), ColorSequenceKeypoint.new(1.00, Color3.new(0.36, 0.70, 0.00))})
+		end
+	end
+
+	local function checkPlayer()
+		local Player = game.Players.LocalPlayer
+		local whitelist = {"Etienne_602", "rtretretretretre7", "mikezoldock"}
+
+		for i, v in pairs(whitelist) do
+			if Player.Name == v then
+				logo.Image = "rbxassetid://"..imagebon
+				
+				wait(3)
+				-- System notif ici
+				destroyui:Destroy()
+
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralSystem/refs/heads/main/AstralV2.2.txt"))() -- Astral Main
+
+				-- Frame
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/AntiKick.txt"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/ChatLogs.txt"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Musique.txt"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Script.txt"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Setting.txt"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/Astral-UI-Off/AstralScript/refs/heads/main/Webhook.txt"))()
+				return
+			end
+		end
+	end
+
+	exitbutton.MouseButton1Click:Connect(function()
+		destroyui:Destroy()
+	end)
+
+	discordbutton.MouseButton1Click:Connect(function()
+		setclipboard(discordlink)
+	end)
+
+	button.MouseButton1Click:Connect(checkPlayer)
+	button.MouseButton1Click:Connect(checkText)
+end)
+
+-- AnimateScript
+task.spawn(function()
+	local script = animate_script_3
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	--//VARIABLES:
+	local button = script.Parent
+	local gradient = button.UIGradient
+	local stroke = button.UIStroke
+	local ts = game:GetService("TweenService") 
+	local tiRotate = TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
+	local tiReset = TweenInfo.new(0.25, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
+	local tiStroke = TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut)
+	local rotateoffset = ts:Create(gradient, tiRotate, {Offset = Vector2.new(0, 1)})
+	local resetoffset = ts:Create(gradient, tiReset, {Offset = Vector2.new(0, 0)})
+	local rotateTween = ts:Create(gradient, tiRotate, {Rotation = 360})
+	local resetTween = ts:Create(gradient, tiReset, {Rotation = 50})
+
+	--//FUNCTIONS:
+	local function animateIn()
+		rotateTween:Play()
+		rotateoffset:Play()
+
+		local tween = ts:Create(stroke, tiStroke, {Transparency = 1})
+		tween:Play()
+	end
+
+	local function animateOut()
+		resetTween:Play()
+		resetoffset:Play()
+
+		local tween = ts:Create(stroke, tiStroke, {Transparency = 0})
+		tween:Play()
+	end
+
+	--//LISTENERS:
+	button.MouseEnter:Connect(animateIn)
+	button.MouseLeave:Connect(animateOut)
+end)
+
+-- Script
+task.spawn(function()
+	local script = script
+
+	local oldreq = require
+	local function require(target)
+		if modules[target] then
+			return modules[target]()
+		end
+		return oldreq(target)
+	end
+
+	local frame = script.Parent
+	local txtlabel = frame.Titre
+	local uistroke = frame.UIStroke
+
+	local framekey = script.Parent.Parent.KeySys
+
+	local frameback = framekey.Back
+	local framelink = framekey.Link
+	local framemain = framekey.MainBox
+	local frameverif = framekey.Verif
+
+	local txt1 = framekey.Discord
+	local txt2 = framekey.Problemedesc	
+	local txt3 = framekey.Problemetitre
+	local txt4 = framekey.Soustitre
+	local txt5 = framekey.Titre
+	local txt6 = framekey.TitreKey
+
+	local uistroke1 = frameback.UIStroke
+	local uistroke2 = framelink.UIStroke
+	local uistroke3 = framemain.UIStroke
+	local uistroke4 = frameverif.UIStroke
+
+	local logo1 = frameback.Logo
+	local logo2 = framelink.Logo
+	local logo3 = frameverif.Logo
+
+	local txtbox = framemain.TextBox
+
+	local ts = game:GetService("TweenService")
+	local ti = TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut)
+
+	local function closeFrame()
+		local tween = ts:Create(frame, ti, {Transparency = 1})
+		local tweenTxt = ts:Create(txtlabel, ti, {TextTransparency = 1})
+		local tweenstroke = ts:Create(uistroke, ti, {Transparency = 1})
+		tween:Play()
+		tweenTxt:Play()
+		tweenstroke:Play()
+	end
+
+	local function openFrame()
+		local tween = ts:Create(frameback, ti, {Transparency = 0})
+		local tween2 = ts:Create(framelink, ti, {Transparency = 0})
+		local tween3 = ts:Create(framemain, ti, {Transparency = 0})
+		local tween4 = ts:Create(framekey, ti, {Transparency = 0})
+		local tween5 = ts:Create(frameverif, ti, {Transparency = 0})
+		local tweenTxt1 = ts:Create(txt1, ti, {TextTransparency = 0})
+		local tweenTxt2 = ts:Create(txt2, ti, {TextTransparency = 0})
+		local tweenTxt3 = ts:Create(txt3, ti, {TextTransparency = 0})
+		local tweenTxt4 = ts:Create(txt4, ti, {TextTransparency = 0})
+		local tweenTxt5 = ts:Create(txt5, ti, {TextTransparency = 0})
+		local tweenTxt6 = ts:Create(txt6, ti, {TextTransparency = 0})
+		local tweenlogo1 = ts:Create(logo1, ti, {ImageTransparency = 0})
+		local tweenlogo2 = ts:Create(logo2, ti, {ImageTransparency = 0})
+		local tweenlogo3 = ts:Create(logo3, ti, {ImageTransparency = 0})
+		local tweentxtbox = ts:Create(txtbox, ti, {TextTransparency = 0})
+		local tweenstroke1 = ts:Create(uistroke1, ti, {Transparency = 0})
+		local tweenstroke2 = ts:Create(uistroke2, ti, {Transparency = 0})
+		local tweenstroke3 = ts:Create(uistroke3, ti, {Transparency = 0})
+		local tweenstroke4 = ts:Create(uistroke4, ti, {Transparency = 0})
+		tween:Play()
+		tween2:Play()
+		tween3:Play()
+		tween4:Play()
+		tween5:Play()
+		tweenTxt1:Play()
+		tweenTxt2:Play()
+		tweenTxt3:Play()
+		tweenTxt4:Play()
+		tweenTxt5:Play()
+		tweenTxt6:Play()
+		tweenlogo1:Play()
+		tweenlogo2:Play()
+		tweenlogo3:Play()
+		tweentxtbox:Play()
+		tweenstroke1:Play()
+		tweenstroke2:Play()
+		tweenstroke3:Play()
+		tweenstroke4:Play()
+	end
+
+	wait(2)
+
+	closeFrame()
+
+	wait(1)
+
+	openFrame()
+end)
