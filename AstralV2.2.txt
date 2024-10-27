@@ -1366,7 +1366,7 @@ task.spawn(function()
 		return oldreq(target)
 	end
 	
-	wait(1)
+	wait(2)
 
 	local frame = script.Parent.Parent.Parent.Parent.Parent.Webhook
 	local linkf = frame.Link
@@ -1594,7 +1594,7 @@ task.spawn(function()
 		return oldreq(target)
 	end
 	
-	wait(1)
+	wait(2)
 
 	local frame = script.Parent.Parent.Parent.Parent.Parent.Settings
 	local Liste = frame.Liste
