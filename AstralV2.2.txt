@@ -988,6 +988,30 @@ local modules = {}
 
 --// Scripts
 
+-- Attendre les Frames
+
+local frameNames = {"AntiKickDetect", "Chatlogs", "Musique", "Script", "Settings", "Webhook"}
+local parent = game:GetService("CoreGui")["AstralV2.2"]
+
+while true do
+    local allFramesFound = true
+
+    for _, frameName in ipairs(frameNames) do
+        local frame = parent:FindFirstChild(frameName)
+        
+        if frame then
+            -- ok
+        else
+            allFramesFound = false
+        end
+    end
+
+    if allFramesFound then
+        break
+    else
+        wait(1)
+    end
+end
 -- ScriptTemps
 task.spawn(function()
 	local script = script_temps
